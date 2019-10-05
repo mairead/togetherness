@@ -12,26 +12,33 @@ class Letter extends Component {
   }
 
   getFontColour = (boardXPos) => {
-    const { mouseXPos, mouseYPos } = this.props;
+    const { mouseXPos } = this.props;
+    const mouseXPosAdjusted = mouseXPos - 50;
     let fontColour = 'black';
-    const mousePosAdjusted = mouseXPos-35;
-    const centerOfLetter = boardXPos + 50;
-
-    let distanceFromCenter = 0;
-
-    if (mousePosAdjusted <= centerOfLetter) {
-      distanceFromCenter = centerOfLetter - mousePosAdjusted;
-    } else if (mousePosAdjusted >= centerOfLetter) {
-      distanceFromCenter = mousePosAdjusted - centerOfLetter;
-    };
+    const distanceFromCenter = this.getDistanceFromCenter(boardXPos);
 
     const hue = (360 / 50) * distanceFromCenter;
 
-    if (mousePosAdjusted >= boardXPos && mousePosAdjusted <= (boardXPos+100)) {
+    if (mouseXPosAdjusted >= boardXPos && mouseXPosAdjusted <= (boardXPos+100)) {
       fontColour = `hsl(${hue}, 100%, 50%)`;
     }
 
     return fontColour;
+  }
+
+  getDistanceFromCenter = (boardXPos) => {
+    const { mouseXPos } = this.props;
+    const mouseXPosAdjusted = mouseXPos - 50;
+    const centerOfLetter = boardXPos + 50;
+    let distanceFromCenter = 0;
+
+    if (mouseXPosAdjusted <= centerOfLetter) {
+      distanceFromCenter = centerOfLetter - mouseXPosAdjusted;
+    } else if (mouseXPosAdjusted >= centerOfLetter) {
+      distanceFromCenter = mouseXPosAdjusted - centerOfLetter;
+    };
+
+    return distanceFromCenter;
   }
 
   render () {

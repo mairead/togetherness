@@ -7,10 +7,10 @@ const MousePointer = ({ xPos, yPos }) => {
         display: block;
         top: ${yPos-162}px;
         left: ${xPos-50}px;
-        width: 5px;
-        height: 5px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
-        border: 2px solid orange;
+        background-image: radial-gradient(rgba(255, 125, 0, 0.8), rgba(255, 125, 0, 0), rgba(255, 125, 0, 0));
       }
     `}</style>
     </div>
