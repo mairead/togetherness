@@ -10,14 +10,8 @@ module.exports = {
     "^.+\\.jsx?$": "jest"
   },
   testMatch: [
-    "**/*.(test|spec).(ts|jsx)"
+    "__tests__/*.spec.jsx"
   ],
-  // globals: {
-  //   "ts-jest": {
-  //     useBabelrc: true,
-  //     tsConfigFile: "jest.tsconfig.json"
-  //   }
-  // },
   coveragePathIgnorePatterns: [
     "/node_modules/",
     "enzyme.js"
