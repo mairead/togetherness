@@ -11,8 +11,6 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0",
     "next": "9.0.7",
     "next-routes": "^1.4.2",
     "peer": "^0.2.10",
@@ -21,18 +19,18 @@
     "react": "16.10.1",
     "react-dom": "16.10.1",
     "react-redux": "^7.1.0",
-    "react-test-renderer": "^16.10.2",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
     "typescript": "^3.6.3"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.9.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.10.2"
   }
 }
