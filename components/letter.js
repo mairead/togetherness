@@ -4,11 +4,11 @@ import MousePointer from '../components/MousePointer';
 
 class Letter extends Component {
   static propTypes = {
-    char: PropTypes.string.required,
-    xPos: PropTypes.number.required,
-    yPos: PropTypes.number.required,
-    mouseXPos: PropTypes.number.required,
-    mouseYPos: PropTypes.number.required,
+    char: PropTypes.string.isRequired,
+    xPos: PropTypes.number.isRequired,
+    yPos: PropTypes.number.isRequired,
+    mouseXPos: PropTypes.number.isRequired,
+    mouseYPos: PropTypes.number.isRequired,
   }
 
   getFontColour = (boardXPos) => {

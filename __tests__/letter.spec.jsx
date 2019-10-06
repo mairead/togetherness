@@ -1,11 +1,24 @@
-// import React from 'react';
+import React from 'react';
+import Enzyme, { shallow, mount } from "enzyme";
 import Letter from '../components/Letter';
 
-// TODO Need babel transformation in tests to call Component method
+const Adapter = require("enzyme-adapter-react-16");
+Enzyme.configure({ adapter: new Adapter() });
+
 describe('Letter', () => {
   test('Should return the distance from the center of the letter', () => {
-    const mousePosX = 100;
-    const getDistanceFromCenter = Letter.getDistanceFromCenter(mousePosX);
-    expect(getDistanceFromCenter).toBe(0);
+    const wrapper = shallow(<Letter
+      char="a"
+      mouseXPos={50}
+      mouseYPos={50}
+      xPos={0}
+      yPos={200}
+    />);
+    const instance = wrapper.instance();
+
+    const boardPosX = 100;
+    const getDistanceFromCenter = instance.getDistanceFromCenter(boardPosX);
+
+    expect(getDistanceFromCenter).toBe(150);
   });
 });

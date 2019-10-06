@@ -16,8 +16,8 @@
     "peer": "^0.2.10",
     "peerjs": "^1.1.0",
     "prop-types": "^15.5.7",
-    "react": "16.10.1",
-    "react-dom": "16.10.1",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-redux": "^7.1.0",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
@@ -29,7 +29,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.9.0",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "jest": "^24.9.0",
     "react-test-renderer": "^16.10.2"
   }
