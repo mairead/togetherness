@@ -4,8 +4,11 @@ import Letter from '../components/Letter';
 import MousePointer from '../components/MousePointer';
 
 class Board extends Component {
-  componentWillMount() {
-    this.setState({ x: 0, y: 0 });
+  constructor(props) {
+    super(props);
+    console.log(this.props);
+
+    this.state = { x: 0, y: 0 };
   }
 
   _onMouseMove(e) {

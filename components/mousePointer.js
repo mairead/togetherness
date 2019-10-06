@@ -1,3 +1,5 @@
+import React from 'react';
+
 const MousePointer = ({ xPos, yPos }) => {
   return (
     <div>

@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import { Link, Router } from "../routes";
 // import RTC from "../libs/rtc";
 import Head from 'next/Head';
@@ -8,7 +9,7 @@ const isClient =
   window.document &&
   window.document.createElement;
 
-export default class extends React.Component {
+export default class extends Component {
   static async getInitialProps({ query }) {
     return query;
   }
