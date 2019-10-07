@@ -1,5 +1,11 @@
 # togetherness
 
+To View app:
+  * clone Next.js app locally
+  * You require Node 10 or higher (NVM use 10)
+  * npm i
+  * npm run dev
+
 ** Work In Progress **
 
 * TODO: Peer JS not resolved in import statement
