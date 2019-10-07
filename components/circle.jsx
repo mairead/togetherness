@@ -9,14 +9,16 @@ render() {
 
   const backgroundGradient =
     `radial-gradient(
-      hsla(${colour}, 100%, 80%),
-      hsla(${colour}, 100%, 0%),
-      hsla(${colour}, 100%, 0%))`;
+      hsla(${colour}, 100%, 50%, 80%),
+      hsla(${colour}, 100%, 50%, 0),
+      hsla(${colour}, 100%, 50%, 0))`;
 
     return (
       <div key={id} className={idClassName}>
-        <style jsx="jsx">{`
+        <style jsx>{`
           div {
+            border-radius: 50%;
+            position: absolute;
             width: ${width};
             height: ${height};
             top: ${top};

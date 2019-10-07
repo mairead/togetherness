@@ -8,7 +8,7 @@ const MousePointer = ({ xPos, yPos }) => {
           position: absolute;
           display: block;
           top: ${yPos-162}px;
-          left: ${xPos-50}px;
+          left: ${xPos-125}px;
           width: 20px;
           height: 20px;
           border-radius: 50%;

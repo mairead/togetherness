@@ -28,8 +28,8 @@ class Letter extends Component {
 
   getDistanceFromCenter = (boardXPos) => {
     const { mouseXPos } = this.props;
-    const mouseXPosAdjusted = mouseXPos - 50;
-    const centerOfLetter = boardXPos + 50;
+    const mouseXPosAdjusted = mouseXPos;
+    const centerOfLetter = boardXPos;
     let distanceFromCenter = 0;
 
     if (mouseXPosAdjusted <= centerOfLetter) {

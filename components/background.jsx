@@ -46,7 +46,7 @@ class Background extends Component {
 
   render() {
     const { circles, circleIds } = this.state;
-    // console.log('circles in render', circles.toJS());
+
     return (
       <div>
         {circleIds.map((id) => (
@@ -57,7 +57,7 @@ class Background extends Component {
           height={circles.getIn([id, 'height'])}
           top={circles.getIn([id, 'top'])}
           left={circles.getIn([id, 'left'])}
-          color={circles.getIn([id, 'color'])}
+          colour={circles.getIn([id, 'colour'])}
         />
         ))}
       </div>
