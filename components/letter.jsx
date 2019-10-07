@@ -13,13 +13,13 @@ class Letter extends Component {
 
   getFontColour = (boardXPos) => {
     const { mouseXPos } = this.props;
-    const mouseXPosAdjusted = mouseXPos - 50;
+    const mouseXPosAdjusted = mouseXPos;
     let fontColour = 'black';
     const distanceFromCenter = this.getDistanceFromCenter(boardXPos);
 
     const hue = (360 / 50) * distanceFromCenter;
 
-    if (mouseXPosAdjusted >= boardXPos && mouseXPosAdjusted <= (boardXPos+100)) {
+    if (mouseXPosAdjusted >= (boardXPos+100) && mouseXPosAdjusted <= (boardXPos+200)) {
       fontColour = `hsl(${hue}, 100%, 50%)`;
     }
 

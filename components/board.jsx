@@ -13,7 +13,6 @@ class Board extends Component {
   _onMouseMove(e) {
     const boardOffset = (window.innerWidth - 800) / 2;
     const boardMousePosX = e.screenX - boardOffset;
-    console.log('boardMousePosX', boardMousePosX, 'boardOffset', boardOffset, e.screenX);
     this.setState({ x: boardMousePosX, y: e.screenY });
   }
 
@@ -40,17 +39,16 @@ class Board extends Component {
         <style jsx>{`
           .board {
             margin: 0 auto;
-
+            cursor: none;
             width: 800px;
             height: 400px;
             position: relative;
             z-index:0;
-            border: 1px solid black;
           }
         `}</style>
       </div>
     );
   }
 }
-//cursor: none;
+
 export default Board;
