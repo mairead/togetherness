@@ -19,6 +19,6 @@ describe('Letter', () => {
     const boardPosX = 100;
     const getDistanceFromCenter = instance.getDistanceFromCenter(boardPosX);
 
-    expect(getDistanceFromCenter).toBe(150);
+    expect(getDistanceFromCenter).toBe(50);
   });
 });
