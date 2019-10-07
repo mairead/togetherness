@@ -120,6 +120,7 @@ export default class extends Component {
         // <p>{isClient ? window.location.href : null}</p>
 
   render() {
+    const { children } = this.props;
     return (
       <div>
         <Head>
@@ -127,7 +128,9 @@ export default class extends Component {
           <link href="//db.onlinewebfonts.com/c/4b76b99051d6848168d9f187b7eeb9c1?family=RosewoodW01-Regular" rel="stylesheet" type="text/css"/>
         </Head>
         <p>Why not invite a friend so that you can play together? {isClient ? window.location.href : null} </p>
-        <Board/>
+        <Board>
+          {children}
+        </Board>
         <p className="credits">RTC functionality created by mariocao here: https://github.com/mariocao/next-webrtc</p>
         <style jsx>{`
           p {

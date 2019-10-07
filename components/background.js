@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import Immutable from 'immutable';
+import Circle from '../components/Circle';
 
 class Background extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     const circleIds = Immutable.List([
       'circle1',
       'circle2',
@@ -23,7 +23,7 @@ class Background extends Component {
         .setIn([id, 'height'], `${circleSize}px`)
         .setIn([id, 'top'], `${this.getRandomisedNumber(-50, 200)}px`)
         .setIn([id, 'left'], `${this.getRandomisedNumber(150, 450)}px`)
-        .setIn([id, 'colour'], `${this.getRandomisedNumber(0, 360)}`);
+        .setIn([id, 'colour'], this.getRandomisedNumber(0, 360));
     });
 
     this.state = {
@@ -44,18 +44,41 @@ class Background extends Component {
     return randomNumber;
   }
 
-  renderCircle = (id) => {
-    const idClassName = `${id} circle`;
-
-    return (
-      <div key={id} className={idClassName} />
-    )
-  }
-
   render() {
     const { circles, circleIds } = this.state;
-    console.log('circles in render', circles);
-    return (circleIds.map((id) => this.renderCircle(id)));
+    console.log('circles in render', circles.toJS());
+    const circleNodes = [];
+
+    // circleIds.map((id) => {
+    //   circleNodes.push(
+    //     <Circle
+    //       key={id}
+    //       id={id}
+    //       width={circles.getIn([id, 'width'])}
+    //       height={circles.getIn([id, 'height'])}
+    //       top={circles.getIn([id, 'top'])}
+    //       left={circles.getIn([id, 'left'])}
+    //       color={circles.getIn([id, 'color'])}
+    //     />
+    //   )
+    // });
+
+    // return circleNodes;
+    return (
+      <div>
+        {circleIds.map((id) => (
+          <Circle
+          key={id}
+          id={id}
+          width={circles.getIn([id, 'width'])}
+          height={circles.getIn([id, 'height'])}
+          top={circles.getIn([id, 'top'])}
+          left={circles.getIn([id, 'left'])}
+          color={circles.getIn([id, 'color'])}
+        />
+        ))}
+      </div>
+      )
   }
 }
 

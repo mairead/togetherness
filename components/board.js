@@ -6,8 +6,6 @@ import MousePointer from '../components/MousePointer';
 class Board extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
-
     this.state = { x: 0, y: 0 };
   }
 
