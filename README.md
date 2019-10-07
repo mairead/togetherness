@@ -15,3 +15,5 @@ To View app:
 * Import wav to webAudio
 * Create pitch shifted wav for 8 tones
 * Trigger webAudio on entering bounding box of Letter component
+
+If you'd like to see this App finished and working with PeerJS up and running I am giving a talk about making this at the next BristolJS. October 30th 2019
