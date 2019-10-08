@@ -5,7 +5,7 @@ To View app:
   * You require Node 10 or higher (NVM use 10)
   * npm i
   * npm run dev
-  * Go to localhose:3000 in browser
+  * Go to localhost:3000 in browser
   * refresh page to see background change
 
 ** Work In Progress **
