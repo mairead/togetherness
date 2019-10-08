@@ -10,6 +10,7 @@ To View app:
 
 ** Work In Progress **
 
+* Fix mousePosX issue. Letter R not responding. Error in offset logic?
 * TODO: Peer JS not resolved in import statement
 * Hook up Peer request to display mousePos {x,y} per connected user
 * Show number of connected users
